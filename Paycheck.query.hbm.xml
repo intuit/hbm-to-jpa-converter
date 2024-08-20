@@ -1,0 +1,50 @@
+<!--	*****************************************************************
+	Copyright (c) 2007 Intuit, Inc. All rights reserved.
+	Unauthorized reproduction is a violation of applicable law.
+	*****************************************************************
+
+	*****************************************************************
+	Company.query.hbm.xml auto-generated on Mon Jul 30 12:34:32 -0700 2007
+
+	Author	MDA Toolkit
+	CodeGen Version	2.2.4.0
+	*****************************************************************  -->
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.intuit.sbd.payroll.psp.domain">
+
+    <query name="NamedQuery">
+        <![CDATA[
+			Select entity1
+			from EntityA as entity1
+			     inner join entity1.EntityB as entity2
+			where entity2.Company =:company
+			    and entity1.SourcePaycheckId =:sourcePaycheckId
+
+			]]>
+    </query>
+
+    <sql-query name="NativeNamedQuery">
+        <return alias="query" class="class1"/>
+        SELECT pc
+        FROM Entity1 pc
+        WHERE pc.Id1 = :id1
+        AND pc.Id2 in (:id2)
+    </sql-query>
+
+
+
+    <sql-query name="NativeNamedQuery1">
+        <return-scalar column="column1" type="type1"/>
+        <return-scalar column="column2" type="type2"/>
+        <![CDATA[
+        SELECT pc.column1,pc.column2
+        FROM Entity1 pc
+        WHERE pc.Id1 = :id1
+        AND pc.Id2 in (:id2)
+     ]]>
+    </sql-query>
+
+</hibernate-mapping>
