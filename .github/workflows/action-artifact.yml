@@ -18,7 +18,15 @@ jobs:
 
       - name: step 2 - Add artifacts to publish to the temp folder
         run: |
+          ls
           cd ..
+          ls
+          cd ..
+          ls
+          cd ..
+          ls
+          cd ..
+          ls
           #Build your Maven project
           mvn clean install
           #Copy the resulting JAR file to the downloads folder
